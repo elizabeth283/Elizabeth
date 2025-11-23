@@ -1,4 +1,4 @@
-export const PACKAGE_ID = "0xabc0e8d9b05b46ea8b50f7183de8a235a8acffaf1254e428446a0fa659ef7c68"
+export const PACKAGE_ID = "0xe69358ca081a2d5cb4cae5574607d91b9286c6b77ea7b4e338590d12c455ccab"
 
 export const APP_CONFIG = {
   NAME: "AdoptFriend",
