@@ -5,7 +5,7 @@ import { ConnectButton, useCurrentAccount } from "@mysten/dapp-kit";
 import { useState } from 'react';
 
 import './App.css';
-import FormInicial from "./formInicial";
+import ShelterForm from "./ShelterForm";
 import { AdoptionDashboard } from "./AdoptionDashboard";
 import { networkConfig } from "./networkConfig";
 
@@ -223,7 +223,7 @@ function App() {
             respuesta={respuesta}
           />
         ) : (
-          <FormInicial 
+          <ShelterForm 
             ClientCall={ClientCall}
             estado={estado}
             setRefugioCreado={setRefugioCreado}
