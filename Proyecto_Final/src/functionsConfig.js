@@ -1,68 +1,38 @@
 export const FUNCTIONS = [
     {
-        titulo: "Ver Nombre del Refugio",
-        descripcion: "Consultar el nombre registrado del refugio de animales",
         nombreFuncion: "ver_nombre",
-        soloLectura: "1",
-        inputs: []
+        titulo: "Ver Nombre del Refugio",
+        descripcion: "Consulta el nombre del refugio de animales",
+        inputs: [],
+        soloLectura: true
     },
-
     {
-        titulo: "Registrar Nuevo Adoptante",
-        descripcion: "Agregar un nuevo adoptante al sistema con nivel inicial Básico.",
         nombreFuncion: "agregar_cliente",
-        soloLectura: "0",
+        titulo: "Agregar Adoptante",
+        descripcion: "Registra un nuevo adoptante en el sistema",
         inputs: [
-            { name: "nombre_cliente", type: "string", label: "Nombre del Adoptante" },
-            { name: "direccion_facturacion", type: "string", label: "Dirección del Hogar" },
-            { name: "ano_de_registro", type: "u8", label: "Año de Registro (ej. 24)" },
-            { name: "id_cliente", type: "u16", label: "ID Único de Adoptante" }
-        ]
+            { name: "nombre", label: "Nombre del Adoptante", type: "string" },
+            { name: "direccion", label: "Dirección", type: "string" },
+            { name: "edad", label: "Edad", type: "u8" }
+        ],
+        soloLectura: false
     },
     {
-        titulo: "Registrar Animal para Adopción",
-        descripcion: "Agregar un nuevo animal al sistema de adopción.",
         nombreFuncion: "agregar_servicio",
-        soloLectura: "0",
+        titulo: "Agregar Animal",
+        descripcion: "Registra un nuevo animal para adopción",
         inputs: [
-            { name: "id_cliente", type: "u16", label: "ID del Adoptante" },
-            { name: "servicio", type: "string", label: "Nombre/Especie del Animal" }
-        ]
+            { name: "tipo_animal", label: "Tipo de Animal", type: "string" },
+            { name: "nombre_animal", label: "Nombre del Animal", type: "string" },
+            { name: "edad_animal", label: "Edad del Animal", type: "u8" }
+        ],
+        soloLectura: false
     },
     {
-        titulo: "Ascender a Adoptante VIP",
-        descripcion: "Promover adoptante a nivel VIP (múltiples adopciones exitosas).",
-        nombreFuncion: "cambiar_nivel_a_oro",
-        soloLectura: "0",
-        inputs: [
-            { name: "id_cliente", type: "u16", label: "ID del Adoptante" }
-        ]
-    },
-    {
-        titulo: "Consultar Beneficios de Adopción",
-        descripcion: "Ver beneficios disponibles según el nivel del adoptante",
-        nombreFuncion: "aplicar_descuento",
-        soloLectura: "1",
-        inputs: [
-            {name: "id_cliente", type:"u16", label: "ID del Adoptante"}
-        ]
-    },
-    {
-        titulo: "Perfil del Adoptante",
-        descripcion: "Ver perfil completo e historial de adopciones",
-        nombreFuncion: "ver_estado_cliente",
-        soloLectura: "1",
-        inputs: [
-            {name: "id_cliente", type:"u16", label: "ID del Adoptante"}
-        ]
-    },
-    {
-        titulo: "Expediente Completo",
-        descripcion: "Consultar toda la información del adoptante y sus animales",
         nombreFuncion: "retornar_todo",
-        soloLectura: "1",
-        inputs: [
-            {name: "id_cliente", type:"u16", label: "ID del Adoptante"}
-        ]
+        titulo: "Ver Todos los Datos",
+        descripcion: "Consulta toda la información del refugio",
+        inputs: [],
+        soloLectura: true
     }
 ];
